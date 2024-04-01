@@ -1,1 +1,20 @@
-<p>config-list works!</p>
+<table mat-table [dataSource]="config$" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="heroesUrl">
+        <th mat-header-cell *matHeaderCellDef> HeroesUrl </th>
+        <td mat-cell *matCellDef="let element"> {{element.heroesUrl}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="textfile">
+        <th mat-header-cell *matHeaderCellDef> Textfile </th>
+        <td mat-cell *matCellDef="let element"> {{element.textfile}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef> Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

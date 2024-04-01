@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Config } from '../../models/config';
 
 @Component({
   selector: 'app-config-list',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./config-list.component.scss']
 })
 export class ConfigListComponent {
-
+  displayedColumns: string[] = ['heroesUrl', 'textfile', 'date'];
+  config$!: Observable<Config[]>;
 }
