@@ -1,0 +1,11 @@
+mat-form-field {
+    margin-top: 22px;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: transparent;
+}
+
+.spaceButton {
+    margin-right: 15px;
+}
