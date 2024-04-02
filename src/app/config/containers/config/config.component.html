@@ -3,7 +3,7 @@
         <mat-toolbar>
             <span>Config</span>
             <span class="example-spacer"></span>
-            <app-config-search></app-config-search>
+            <app-config-search (newConfigEvent)="showConfig($event)"></app-config-search>
         </mat-toolbar>
         <app-config-list></app-config-list>
     </mat-card-content>

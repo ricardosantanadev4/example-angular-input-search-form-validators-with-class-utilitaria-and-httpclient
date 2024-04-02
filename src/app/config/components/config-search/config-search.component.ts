@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { NonNullableFormBuilder } from '@angular/forms';
 
 @Component({
@@ -10,9 +10,12 @@ export class ConfigSearchComponent {
 
   formSearch = this.formBuilder.control('');
 
+  @Output() newConfigEvent = new EventEmitter<string>();
+
   constructor(private formBuilder: NonNullableFormBuilder) { }
 
   onSearch() {
-    console.log(this.formSearch.value);
+    // console.log(this.formSearch.value);
+    return this.newConfigEvent.emit(this.formSearch.value);
   }
 }

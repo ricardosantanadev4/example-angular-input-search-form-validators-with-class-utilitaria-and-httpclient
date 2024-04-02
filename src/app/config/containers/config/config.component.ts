@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ConfigComponent {
 
+  showConfig(value: string) {
+    console.log(value);
+  }
 }
