@@ -5,6 +5,6 @@
             <span class="example-spacer"></span>
             <app-config-search (newConfigEvent)="showConfig($event)"></app-config-search>
         </mat-toolbar>
-        <app-config-list></app-config-list>
+        <app-config-list [configList$]="config$"></app-config-list>
     </mat-card-content>
 </mat-card>

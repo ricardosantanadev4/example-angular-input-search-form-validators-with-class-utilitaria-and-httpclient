@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Config } from '../../models/config';
 
@@ -9,5 +9,5 @@ import { Config } from '../../models/config';
 })
 export class ConfigListComponent {
   displayedColumns: string[] = ['heroesUrl', 'textfile', 'date'];
-  config$!: Observable<Config[]>;
+  @Input() configList$!: Observable<Config[]>;
 }
