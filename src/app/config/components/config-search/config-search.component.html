@@ -7,6 +7,6 @@
         Config:
     </mat-label>
     <span>
-        <input matInput (keydown.enter)="onSearch()" style="color: white;">
+        <input matInput (keydown.enter)="onSearch()" style="color: white;" [formControl]="formSearch">
     </span>
 </mat-form-field>

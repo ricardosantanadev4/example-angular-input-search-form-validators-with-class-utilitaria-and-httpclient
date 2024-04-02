@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NonNullableFormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-config-search',
@@ -6,8 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./config-search.component.scss']
 })
 export class ConfigSearchComponent {
-  onSearch() { }
 
-  constructor(){}
+  formSearch = this.formBuilder.control('');
 
+  constructor(private formBuilder: NonNullableFormBuilder) { }
+
+  onSearch() {
+    console.log(this.formSearch.value);
+  }
 }
