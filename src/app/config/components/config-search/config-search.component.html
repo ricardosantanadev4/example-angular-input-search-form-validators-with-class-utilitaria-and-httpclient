@@ -9,4 +9,5 @@
     <span>
         <input matInput (keydown.enter)="onSearch()" style="color: white;" [formControl]="formSearch">
     </span>
+    <mat-error *ngIf="formSearch.invalid">{{formUtils.getErrorMessageFromField(formSearch)}}</mat-error>
 </mat-form-field>
